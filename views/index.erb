@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>SushiDA!!!</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header><a href="/"><img src="/image/sushida-logo.png"></a></header>
+<main>
+  <form method="post" action="/record">
+    <label>ニックネーム:<br><input type="text" id="name"></label>
+    <label>金額:<br><input type="number" id="score"></label>
+    <input type="submit" value="登録">
+  </form>
+  <ul>
+    <% scores.each do |score| %>
+      <li>
+        <%= score.name %>さん: <%= score.score %>円<br>
+      </li>
+    <% end %>
+  </ul>
+</main>
+</body>
+</html>
